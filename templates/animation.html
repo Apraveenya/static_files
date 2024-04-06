@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Css Transforms</title>
+	<style>
+		div
+		{
+			box-shadow:0 0 10px black;
+			width:250px;
+			height:300px;
+			margin:80px auto;
+			overflow:hidden;
+			position:relative;
+		}
+		div:hover
+		{
+			cursor:pointer;
+		}
+		div>img
+		{
+			width:inherit;
+			height:inherit;
+			filter:grayscale(100%);
+			transition:all 1s linear 2s;
+		}
+		div:hover>img
+		{
+			filter:grayscale(0%);
+			transform:scale(1.2,1.2);
+		}
+		div>#curtain
+		{
+			background-color:red;
+			position:absolute;
+			top:-80px;
+			left:0px;
+			transition:all 1s linear 1s;
+			overflow:hidden;
+		}
+		div:hover>#curtain
+		{
+			transform:translateY(-100%);
+		}
+		div>#left
+		{
+			position:absolute;
+			top:-80px;
+			left:0px;
+			background-color:black;
+			width:50%;
+			transition:all 1s linear 0s;
+			transform-origin:left;
+		}
+		div:hover>#left
+		{
+			transform:perspective(200px) rotateY(90deg);
+		}
+
+		div>#right
+		{
+			position:absolute;
+			top:-80px;
+			left:50%;
+			background-color:yellow;
+			width:50%;
+			transition:all 1s linear 0s;
+			transform-origin:right;
+		}
+		div:hover>#right
+		{
+			transform:perspective(200px) rotateY(-90deg);
+		}
+	</style>
+</head>
+<body bgcolor="lightgreen">
+	<div>
+		<img src="https://www.bhaktiphotos.com/wp-content/uploads/2020/12/Lord-Venkateswara-Swamy-Images-Photos.jpg" alt="Image Not Found">
+
+		<div id="curtain">
+
+		<div id="left"></div>
+		<div id="right"></div>
+	</div>
+</body>
+</html>

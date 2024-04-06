@@ -1,0 +1,15 @@
+h1{
+    color:blue;
+
+}
+span{
+    color:green
+}
+img{
+    
+    margin:12px;
+    border-radius:10px;
+}
+img:hover{
+ width:200px;
+}

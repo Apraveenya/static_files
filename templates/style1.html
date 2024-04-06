@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{% static "css/c.css" %}'>
+</head>
+<body bgcolor="pink">
+    <center>
+    <H1 style="color:black">This is static file we are uploading <span>images</span>here</H1>
+    <img src='{% static "images/Colourful_Flower.jpeg" %}' width="230px" height="230px">
+    <img src='{% static "images/orangeflower.jpeg" %}' width="230px" height="230px">
+    
+    <h3><a href="{% url 'styles' %}">Click here for previous page</a></h3>
+    <h3><a style="color:blueviolet" href="{% url 'animation' %}">click here for animation page</a></h3>
+    </center>
+</body>
+</html>
